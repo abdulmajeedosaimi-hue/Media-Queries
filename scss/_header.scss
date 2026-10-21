@@ -1,0 +1,18 @@
+@use "utils/variables" as *;
+
+@use "utils/mixins" as *;
+.header {
+  @include center(column, center);
+  background-color: map-get($colors, "primary");
+  padding-bottom: 40px;
+
+  &__title {
+    font-size: map-get($font-size, "extra-large");
+    color: map-get($colors, "surface");
+    padding: map-get($spacing, "extra-large") map-get($spacing, "large");
+  }
+  &__description {
+    font-size: map-get($font-size, "large");
+    color: map-get($colors, "accent");
+  }
+}

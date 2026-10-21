@@ -1,0 +1,23 @@
+@use "utils/variables" as *;
+
+@use "utils/mixins" as *;
+.footer {
+  @include center(column, center);
+  background-color: map-get($colors, "primary");
+
+  &__text {
+    font-size: map-get($font-size, "extra-large");
+    color: map-get($colors, "surface");
+    padding: map-get($spacing, "large") map-get($spacing, "large");
+  }
+  &__description {
+    font-size: map-get($font-size, "medium");
+    color: map-get($colors, "accent");
+  }
+  &__copyright {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: map-get($font-size, "small");
+    color: map-get($colors, "muted");
+  }
+}

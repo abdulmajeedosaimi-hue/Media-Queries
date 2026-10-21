@@ -1,0 +1,98 @@
+@media (max-width: 600px) {
+  body {
+    background-color: #fff0e6;
+  }
+
+  header,
+  .header {
+    background-color: #e85d75;
+  }
+
+  h1,
+  .header__title {
+    font-size: 28px;
+  }
+
+  h3,
+  .book__title {
+    color: #e85d75;
+  }
+
+  footer,
+  .footer {
+    text-align: left;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  header,
+  .header {
+    background-color: #176b67;
+  }
+
+  h1,
+  .header__title {
+    font-size: 36px;
+  }
+
+  article,
+  .book__card {
+    background-color: #e0f2ef;
+  }
+
+  footer,
+  .footer {
+    background-color: #24204f;
+    text-align: right;
+  }
+}
+
+@media (min-width: 901px) {
+  body {
+    background-color: #e8eaf6;
+  }
+
+  h1,
+  .header__title {
+    font-size: 48px;
+  }
+
+  article,
+  .book__card {
+    background-color: #fff4cc;
+  }
+
+  h3,
+  .book__title {
+    color: #176b67;
+  }
+
+  header,
+  .header {
+    text-align: left;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+  main {
+    background-color: #dce6f1;
+  }
+
+  h2,
+  .book__title {
+    color: #176b67;
+  }
+}
+
+@media (max-width: 500px), (min-width: 1000px) {
+  footer,
+  .footer {
+    background-color: #24204f;
+  }
+}
+
+@media not screen and (max-width: 500px) {
+  body {
+    background-color: tomato;
+  }
+}

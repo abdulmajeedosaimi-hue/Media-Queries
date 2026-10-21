@@ -1,0 +1,72 @@
+@use "utils/variables" as *;
+
+@use "utils/mixins" as *;
+.book {
+  gap: 50px;
+
+  @include center(row, center);
+  background-color: map-get($colors, "background");
+  %card {
+    background-color: map-get($colors, "surface");
+    color: map-get($colors, "text");
+    padding: map-get($spacing, "large");
+    border-radius: 16px;
+    @include center(column, stretch);
+    width: 370px;
+    height: 460px;
+
+    justify-content: space-between;
+    gap: 50px;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  &__card {
+    @extend %card;
+  }
+  &__wrapper {
+    flex-grow: 1;
+  }
+  &__category {
+    background-color: map-get($colors, "background");
+    color: map-get($colors, "text");
+    padding: map-get($spacing, "small") map-get($spacing, "small");
+    font-size: map-get($font-size, "small");
+    border-radius: 10px;
+  }
+  &__title {
+    font-size: map-get($font-size, "extra-large");
+    color: map-get($colors, "primary");
+    padding: map-get($spacing, "large") map-get($spacing, "large");
+  }
+  &__writer {
+    font-size: map-get($font-size, "small");
+    color: map-get($colors, "accent");
+    padding: map-get($spacing, "large") map-get($spacing, "large");
+  }
+
+  &__description {
+    font-size: map-get($font-size, "small");
+    color: map-get($colors, "muted");
+  }
+
+  &__cost {
+    color: map-get($colors, "highlight");
+    font-size: map-get($font-size, "large");
+    padding-bottom: 20px;
+  }
+  &__button {
+    padding: map-get($spacing, "small") map-get($spacing, "small");
+    border-radius: 5px;
+    width: 100%;
+    background-color: map-get($colors, "primary");
+    color: map-get($colors, "surface");
+    font-size: map-get($font-size, "small");
+    border: unset;
+    @each $button, $button-color in $button-colors {
+      &--#{$button} {
+        background-color: $button-color;
+      }
+    }
+  }
+}

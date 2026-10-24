@@ -3,4 +3,6 @@
   flex-direction: $position;
   justify-content: center;
   align-items: $align;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
 }
